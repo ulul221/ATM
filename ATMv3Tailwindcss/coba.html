@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#324154] py-[5vw] px-[10vw]">
+    <div class="bg-[#597298] flex justify-between rounded-md text-white text-[30px] font-mono">
+        <div class="px-[10vh] py-[20vh] space-y-10 text-center">
+            <h1>Masukan Jumlah Nominal Pecahan<br>100.000 dan 50.000</h1>
+            <input id="input" class="w-[35vh] rounded-lg text-black text-center" type="number">
+            <button onclick="button()" class="text-green-400">ENTER >></button>
+            <a class="text-pink-400" href="masuk.html">CANCEL >></a>
+            <h1>Tekan "CANCEL" Untuk Membatalkan</h1>
+        </div>
+        <img class="w-[60vh] h-[80vh]" src="/img/ambil-uang.jpg" alt="">
+    </div>
+    <script>
+
+        let saldo = 1000000
+        let input = document.getElementById('input')
+        
+        alert(`Saldo anda adalah ${saldo}`)
+        function button() {
+            if (input.value < saldo) {
+                if (input.value == "") {
+                    alert('Nominal tidak boleh kosong')
+                }else if (input.value % 50000 == 0) {
+                    confirm(`Anda akan menarik sebesar ${input.value}?`)= true
+                    alert(`Berhasil, sisa saldo anda adalah ${saldo - input.value}`)
+                    location.href = "/html/masuk.html"
+                }else(
+                    alert('Input tidak sesuai')
+                )
+            }else(
+                alert('Saldo tidak Mencukupi')
+            )
+        }
+
+    </script>
+</body>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#324154] py-[5vw] px-[10vw]">
+    <div class="bg-[#597298] flex justify-between rounded-md text-white text-[30px] font-mono">
+        <div class="space-y-3 pl-[10vh] pt-[10vh]">
+            <h1 class="text-center">Silahkan Pilih Paket<br>Nominal</h1>
+            <div class="flex space-x-20">
+                <div class="flex flex-col space-y-2 text-start">
+                    <button onclick="uang(tunai.seratus)"><- 100.000</button>
+                    <button onclick="uang(tunai.duaratus)"><- 200.000</button>
+                    <button onclick="uang(tunai.tigaratus)"><- 300.000</button>
+                    <a class="text-center" href="nominallain.html"><- Nominal<br>Lain</a>
+                </div>
+                <div class="flex flex-col space-y-2 text-end">
+                    <button onclick="uang(tunai.limaratus)" class="pl-8">500.000 -></button>
+                    <button onclick="uang(tunai.satujuta)">1.000.000 -></button>
+                    <button onclick="uang(tunai.satusetengahjuta)">2.000.000 -></button>
+                    <a class="text-center" href="#" onclick="transaksiLain()">Transaksi -><br>Lain</a>
+                </div>
+            </div>
+        </div>
+        <img class="w-[70vh] h-[70vh]" src="/img/ambil-uang.jpg" alt="">
+    </div>
+    <script src="/js/penarikan.js"></script>
+</body>
+</html>
